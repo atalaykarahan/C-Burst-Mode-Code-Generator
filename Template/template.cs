@@ -1,0 +1,1 @@
+﻿services.AddScoped<IthisareaRepository, thisareaRepository>();
