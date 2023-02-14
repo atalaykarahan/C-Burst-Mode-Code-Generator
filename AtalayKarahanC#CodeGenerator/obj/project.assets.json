@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\atala\\.nuget\\packages\\": {}
+    "C:\\Users\\OsoftLenovoOld\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\atala\\Desktop\\TestLabKrhn\\AtalayKarahanC#CodeGenerator\\AtalayKarahanCodeGenerator.csproj",
+      "projectUniqueName": "C:\\Users\\OsoftLenovoOld\\Documents\\GitHub\\C-Burst-Mode-Code-Generator\\AtalayKarahanC#CodeGenerator\\AtalayKarahanCodeGenerator.csproj",
       "projectName": "AtalayKarahanCodeGenerator",
-      "projectPath": "C:\\Users\\atala\\Desktop\\TestLabKrhn\\AtalayKarahanC#CodeGenerator\\AtalayKarahanCodeGenerator.csproj",
-      "packagesPath": "C:\\Users\\atala\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\atala\\Desktop\\TestLabKrhn\\AtalayKarahanC#CodeGenerator\\obj\\",
+      "projectPath": "C:\\Users\\OsoftLenovoOld\\Documents\\GitHub\\C-Burst-Mode-Code-Generator\\AtalayKarahanC#CodeGenerator\\AtalayKarahanCodeGenerator.csproj",
+      "packagesPath": "C:\\Users\\OsoftLenovoOld\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\OsoftLenovoOld\\Documents\\GitHub\\C-Burst-Mode-Code-Generator\\AtalayKarahanC#CodeGenerator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\atala\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\OsoftLenovoOld\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
