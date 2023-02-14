@@ -8,6 +8,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace AtalayKarahanCodeGenerator
 {
@@ -18,12 +19,11 @@ namespace AtalayKarahanCodeGenerator
         string? oldText;
         int startPosition;
         int endPosition;
-        //string? newText;
         string? unchangedFiles;
-        string[] fileNames;
-        List<string> replaceWords;
-        string finalYazisi;
-        string durumYazisi;
+        string[]? fileNames;
+        List<string>? replaceWords;
+        string? finalYazisi;
+        string? durumYazisi;
         string option = "n";
 
         public void Start()
@@ -51,11 +51,12 @@ namespace AtalayKarahanCodeGenerator
 ██║  ██║███████╗██║  ██║██████╔╝    ██║  ██║██║ ╚████║██████╔╝    ██║  ██║███████╗██║     ███████╗██║  ██║   ██║   
 ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝     ╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝     ╚═╝  ╚═╝╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   
 ----------------------------------------------------------------------------------------------------------------
-
-1)Open Template Folder and write your template text.
-2)Select the Export file location.
-3)Select 'Next' Option to continue processing.
-(Use the arrow keys to cycle through options and press enter to select an option.)";
+1) Open Template Folder and write your template text.
+2) Select the Export file location.
+3) Select 'Next' Option to continue processing.
+(Use the arrow keys to cycle through options and press enter to select an option.)
+----------------------------------------------------------------------------------
+                                                                                  ";
             string[] options = { "Open The Template Folder", "Select The Export Folder", "Next", "Go Back" };
             Menu mainMenu = new Menu(prompt, options);
             int selectedIndex = mainMenu.Run();
@@ -83,16 +84,18 @@ namespace AtalayKarahanCodeGenerator
         private void TemplateFolder()
         {
             //Template olarak kullanılıcak dosyanın yolu
-            templatePath = @"C:\Users\atala\Desktop\TestLabKrhn\Template\template.cs";
+            templatePath = Path.Combine(Directory.GetCurrentDirectory() + "\\Template\\template.cs");
 
-            //Dosyanın yolu bulunursa dosyayı açma işelmi
+
+            //Dosyanın yolu bulunursa açar bulunmazsa yaratır.
             if (File.Exists(templatePath))
             {
                 Process.Start("notepad.exe", templatePath);
             }
             else
             {
-                Console.WriteLine("Dosya Bulunamadı");
+                File.WriteAllText(templatePath,"");
+                Process.Start("notepad.exe", templatePath);
             }
             //Tüm işlemler bittikten sonra sayfa kapanmasın diye aynı sayfayı baştan çağırdığımız yer.
             RunMainMenu();
@@ -194,7 +197,6 @@ namespace AtalayKarahanCodeGenerator
                 sb.AppendLine(templateContent);
 
             }
-            //exportPath = @"C:\Users\OsoftLenovoOld\Desktop\TestLabKrhn\Output\ReadandRepeat.cs";
             File.WriteAllText(exportPath, sb.ToString());
             Console.WriteLine("Dosya başarıyla oluştu!");
             Console.WriteLine("Dosyanızı şu yolda bulabilirsiniz.\r\n" + exportPath);
