@@ -1,0 +1,11 @@
+
+AtalayKarahanC\#CodeGenerator/.vs
+AtalayKarahanC\#CodeGenerator/obj
+*.cache
+AtalayKarahanC\#CodeGenerator/bin
+*.vsidx
+*.vsidx
+*.v2
+*.2
+*.dll
+*.cs
